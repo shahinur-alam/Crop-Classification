@@ -71,12 +71,12 @@ os.makedirs(OUTPUTS_DIR, exist_ok=True)
 
 # Default image size (adjusted below if InceptionV3)
 IMAGE_SIZE = (224, 224)
-BATCH_SIZE = 32
+BATCH_SIZE = 64
 SEED = 42
 
 # Training schedule
-EPOCHS_HEAD = 5          # Phase 1: train head only
-EPOCHS_FT = 10           # Phase 2: fine-tune backbone
+EPOCHS_HEAD = 50          # Phase 1: train head only
+EPOCHS_FT = 100           # Phase 2: fine-tune backbone
 LR_HEAD = 1e-3
 LR_FT = 2e-5
 UNFREEZE_LAST_N = 50     # Unfreeze last N layers during fine-tuning
